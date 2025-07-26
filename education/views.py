@@ -45,7 +45,7 @@ class term_students(APIView):
             return Response({
                 "error": "no query_params to search",
                 "detail": "پارامتری برای جست و جو پیدا نشد ... !",
-            }, status=status.HTTP_200_OK)
+            }, status=status.HTTP_400_BAD_REQUEST)
         id = query_params.get('id')
 
         result = {}
